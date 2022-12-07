@@ -37,6 +37,9 @@ function App() {
     setExpenses((prevExpenses) => { return [ExpenseData, ...prevExpenses]});
     // setExpenses([ExpenseData, ...expenses]);
   }
+
+
+  
   console.log(expenses);
   return (<div>
     <h2>Let's get started !</h2>
