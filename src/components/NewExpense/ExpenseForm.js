@@ -41,9 +41,10 @@ function ExpenseForm(props){
         event.preventDefault();
 
         const expenseData = {
+            id: Math.random(),
             title: enteredTitle,
             date: new Date(enteredDate),
-            amount: enteredAmount
+            amount: parseInt(enteredAmount)
         }
         
         setEnteredTitle('');

@@ -4,7 +4,6 @@ import './NewExpense.css'
 function NewExpense(props) {
     
     function addNewExpenseHandler(expenseData){
-        console.log(expenseData);
         props.addExpense(expenseData);
     }
 
