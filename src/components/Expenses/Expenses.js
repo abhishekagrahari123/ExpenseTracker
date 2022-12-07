@@ -13,11 +13,12 @@ function Expenses(props){
     function yearChangeHandler(yearChoosed){
         setNewYear(yearChoosed);
     }
+    const filteredItems = props.expenses.filter((expense) => { return expense.date.getFullYear().toString()===newYear});
 
     return (
             <Card className='expenses'>
                 <ExpensesFilter year={newYear} onYearChange={yearChangeHandler}></ExpensesFilter>
-                {props.expenses.map((expense) => { return <ExpenseItem key={expense.id} title={expense.title} date={expense.date} amount={expense.amount}/>})}
+                {filteredItems.map((expense) => { return <ExpenseItem key={expense.id} title={expense.title} date={expense.date} amount={expense.amount}/>})}
             </Card>
     )
     
