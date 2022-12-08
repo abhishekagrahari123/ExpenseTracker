@@ -1,7 +1,6 @@
 import './ChartBar.css'
 
 function ChartBar(props){
-
     let filledHeight = '0%';
     if(props.maxVal > 0) filledHeight = (props.value/props.maxVal)*100 + '%';
     return (<div className='chart-bar'>
@@ -11,5 +10,4 @@ function ChartBar(props){
         <div className='chart-bar__label'>{props.label}</div>
     </div>)
 }
-
 export default ChartBar;
